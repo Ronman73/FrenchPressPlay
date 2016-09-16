@@ -3,10 +3,15 @@ mark {
   color: #2e723e;
   background: transparent;
   font-weight: bold;
+  text-shadow: 3px 3px black
 }
 
+#intro .item {
+   opacity: 0.7;
+   text-shadow: 2px 2px black;
+   text
+}
 #intro {
-  background-color: #2e723e;
 
 }
 
