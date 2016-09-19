@@ -24,7 +24,7 @@ mark {
   text-shadow: 2px 2px black
 }
 
-#intro .item {
+#intro.item {
    opacity: 0.8;
    text-shadow: 2px 2px black;
 }
