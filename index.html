@@ -154,7 +154,9 @@
                             <div>
                                 <button id="min5" type="button" class="btn btn-lg btn-primary">5 minutes</button>
                                 <h1><span id="countdown1">300</span></h1>
-                            </div>
+                            
+                            <button type="button" class="btn btn-success" id = "api5min">5minAPI</button>
+                           
 
                     
 
@@ -213,6 +215,9 @@
                     </div>
                     <p class="lead">The grounds you end up soaking will effect your coffee brew.  The coarser the better. Common practice is to ensure all grounds are soaked for at least a minute. Which adds validity to R. Kelly's belief that there really ain't nothing wrong with a little bumpy grind.</p>
                     <h4>Stirring is debatable.  Do your research.  Drink lots of coffee.</h4>
+                    
+                   
+                        <button type="button" class="btn btn-success" id = "api1min">1minAPI</button>
                     
 
 
@@ -288,6 +293,9 @@
                         <div class="col-md-8 col-md-offset-2">
                             <form action="#" method="post" id="frm-landingPage2" class="form">
                                 <div class="input-group">
+
+                        <button type="button" class="btn btn-success" id = "api4min">4minAPI</button>
+
                                     <!-- <input type="text" class="form-control" placeholder="your email address" name="email" id="frm-landingPage2-email" required value="">
  -->
                                     <!-- <span class="input-group-btn">
@@ -310,7 +318,7 @@
         <!-- *** TESTIMONIALS ***
 _________________________________________________________ -->
         <div class="section" id="section5">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="col-md-12">
                     <h2 class="title" data-animate="fadeInDown">PLUNGE</h2>
                     <div>
@@ -321,7 +329,44 @@ _________________________________________________________ -->
                         <div class="col-md-8 col-md-offset-2">
                             <p class="text-large text-thin" data-animate="fadeInUp">“There are few things I care about less than coffee. I have two big cups every morning: light and sweet, preferably in cardboard cup. Any bodega will do. I don’t want to wait for my coffee. I don’t want some man-bun, Mumford and Son motherfucker to get it for me. I like good coffee but I don’t want to wait for it, and I don’t want it with the cast of Friends. It’s a beverage; it’s not a lifestyle.” </p>
                             <p class="text-large text-thin margin-bottom" data-animate="fadeInUp">A very bad quack might jinx zippy fowls. Few quips galvanized the mock jury box. Quick brown dogs jump over the lazy fox. The jay, pig, fox, zebra, and my wolves quack! Blowzy red vixens fight for a quick jump. Joaquin Phoenix was gazed by MTV for luck. A wizard’s job is to vex chumps quickly in fog. Watch "Jeopardy!", Alex Trebek's fun TV quiz game. Woven silk pyjamas exchanged for blue quartz.</p>
-                            <p data-animate="fadeInUp"><img src="img/home-99.jpeg" alt="" class="img-circle img-responsive ondra-michal"></p>
+                            <!-- <p data-animate="fadeInUp"><img src="img/home-99.jpeg" alt="" class="img-circle img-responsive ondra-michal"></p> -->
+
+                            
+
+                            <!-- MODAL$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+                            <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#gifModal">
+  Gyphifyer
+</button>
+
+<!-- 15 second GifModal -->
+<div class="modal fade" id="gifModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Gifs of the Day</h4>
+      </div>
+      <div class="modal-body">
+ <!-- GIF BUTTONS (3)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <button type="button" data-search="funny gifs"class="btn btn-success" id = "gifButton1">Gyphifier</button>
+        <button type="button" data-search="funny gifs"class="btn btn-success" id = "gifButton2">Gyphifier</button>
+        <button type="button" data-search="funny gifs"class="btn btn-success" id = "gifButton3">Gyphifier</button>
+            <!-- Modal Gif Well~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <div class="well" id="gifWell">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -491,20 +536,16 @@ _________________________________________________________ -->
         <script src="js/bootstrap.min.js"></script>
         <!-- Timer js  -->
         <script src="js/timer.js"></script>
-
-
         <!-- waypoints for scroll spy -->
         <script src="js/waypoints.min.js"></script>
-
         <!-- owl carousel -->
         <script src="js/owl.carousel.min.js"></script>        
-
         <!-- jQuery scroll to -->
         <script src="js/jquery.scrollTo.min.js"></script>
-
         <!-- main js file -->
-
-        <script src="js/front.js"></script>        
+        <script src="js/front.js"></script> 
+        <!-- API buttons-->
+        <script src="js/apiButtons.js"></script>    
 
 
     </body>
