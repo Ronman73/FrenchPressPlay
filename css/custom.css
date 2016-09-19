@@ -1,15 +1,32 @@
-/* your styles go here */
+/***************************************************************************
+
+	FrenchPress.Play Custom Stylesheet
+
+	Colors used: 
+	White Fonts           : #ffffff
+	Green          : #549666
+	Light Grey Background : #f7f7f7
+	thin Dark Grey Text   : #5a5a5a;
+	black footer		  : #191919
+
+****************************************************************************/
+
+
+/*----------------------------------------------------------------------------
+
+*	FrenchPress.Play green color emphasis with shadow reference
+
+-----------------------------------------------------------------------------*/
 mark {
   color: #2e723e;
   background: transparent;
   font-weight: bold;
-  text-shadow: 3px 3px black
+  text-shadow: 2px 2px black
 }
 
 #intro .item {
-   opacity: 0.7;
+   opacity: 0.8;
    text-shadow: 2px 2px black;
-   text
 }
 #intro {
 
