@@ -47,8 +47,7 @@
 </head>
 
 <body data-spy="scroll" data-target="#navigation" data-offset="120">
-
-                            <!-- ~~~~~~~~~~~~~~~~~~~
+    <!-- ~~~~~~~~~~~~~~~~~~~
                             ######  LAYOUT   #######
                            ~~~~~~~~~~~~~~~~~~~~~~~~~~
                             A:  #navbar    >NAVBAR<
@@ -62,8 +61,7 @@
                             I:  #section7  >CONTACTS<
                             J:  #footer    >FOOTER<
                             ~~~~~~~~~~~~~~~~~~~~~ -->
-
-<!-- 
+    <!-- 
 ________________________________________________________________________________________
  A:  START #navbar======================================================================
 ________________________________________________________________________________________
@@ -98,32 +96,29 @@ ________________________________________________________________________________
                     <li><a href="#section7">Contact</a>
                     </li>
                 </ul>
-            </div> 
+            </div>
         </div>
     </div>
-                                <!-- 
+    <!-- 
                                 #####################################################
                                 ==================================END A: #navbarSTUFF
                                 ########################################################
                                 -->
-    
-<!--
+    <!--
 ___________________________________________________________________________________________
 B: START #intro- LANDING PAGE==============================================================
 ___________________________________________________________________________________________ 
 -->
-     <div id="all">
-
+    <div id="all">
         <div id="intro" class="clearfix">
             <div class="item">
                 <div class="container-fluid">
                     <div class="row">
                         <h1 data-animate="fadeInDown"><p>FrenchPress.</p> <p>Play.</p></h1>
-                       
                         <p class="message" data-animate="fadeInUp">Giving a shit about the coffee you're making before you've had some is one of life's most terrible ironies.</p>
                         <p class="message" data-animate="fadeInUp">Time wasted waiting on coffee to brew is just insult to injury.</p>
-                        <p class="message" data-animate="fadeInUp"><mark>FrenchPress.Play</mark>is the hug, kiss, and dinner you expect before the inevitable.</p>
-        
+                        <p class="message" data-animate="fadeInUp">
+                            <mark>FrenchPress.Play</mark>is the hug, kiss, and dinner you expect before the inevitable.</p>
                         <!-- <p>Dedicated to walking anyone through the process of pressing what ever coffee grounds they can get your hands on and creating a coffee brewing experience that is entertaining, productive, and a seamless part a daily fix/ routine.  All while being mindful of barista precision and best practices despite them not being able to spell for shit. </p> -->
                         <!-- and  -->
                         <!--  <div class="col-md-6 col-md-offset-3" data-animate="fadeInUp">
@@ -148,13 +143,12 @@ ________________________________________________________________________________
                 </div>
             </div>
         </div>
-                                <!-- 
+        <!-- 
                                 #################################################
                                 ======================END B: #intro- LANDING PAGE
                                 ###################################################
                                 -->
-
-<!-- 
+        <!-- 
 __________________________________________________________________________________
 C: START #section1 - WHO ARE WE? ======================================================
 __________________________________________________________________________________ 
@@ -171,122 +165,196 @@ ________________________________________________________________________________
                                 <p data-animate="fadeInUp"><img src="img/lynchQuote.jpg" alt="" class="img-rounded img-responsive"></p>
                         </div>
                     </div>
-                </div><!-- /.12 -->
-            </div><!-- /.container -->
-        </div> <!-- /.section -->
-                                <!-- 
+                </div>
+                <!-- /.12 -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.section -->
+        <!-- 
                                 #################################################
                                 =====================END C: #section1 WHO ARE WE?
                                 #################################################
                                  -->
- 
-
-<!-- 
+        <!-- 
 _________________________________________________________________________________             
 D:  START #section2- BOIL========================================================
 _________________________________________________________________________________
  -->
-       
         <div class="section text-gray" id="section2">
             <div class="container">
                 <div class="col-md-12">
                     <h2 class="title" data-animate="fadeInDown">BOIL</h2>
-                        <p class="lead">Because we're all a little ADD and who doesn't forget about what they started after 4 minutes? </p>
-                            <div>
-                                <button id="min5" type="button" class="btn btn-lg btn-primary">5 minutes</button>
-                                <h1><span id="countdown1">300</span></h1>
-                            
-                            <button type="button" class="btn btn-success" id = "api5min">5minAPI</button>
-
-                          <div class="row services"><!-- When this line is deleted it throws everything off.  Maybe make new div? -->      
-                    
-
-                        <div class="container"><!-- Reference: http://avexdesigns.com/responsive-youtube-embed/ -->
-                            <div class="row">
-                                <h3>Possible Video Dump</h3>
-                                <hr>
-                            </div><!--.row -->
-                        </div><!--./container -->
-
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <h4>Yo homes, smell you later!</h4>
-                                    <p>
-                                        On the playground is where I pressed most of my days....
-                                    </p><img src="http://static.celebuzz.com/uploads/2013/06/20/french_press_bel_air-600x450.jpg" class="img-responsive center-block" alt="tv">
-                                    
-                                </div><!--.col -->
-                                
-                                <div class="col-md-8">
-                                    <div class="vid">
-                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/GncGWS0Mzww" frameborder="0" allowfullscreen></iframe>
-                                    </div><!--./vid -->                          
-                                </div><!--.col -->
-                            </div><!--./row -->
-                        </div><!--./container -->
+                    <p class="lead">Because we're all a little ADD and who doesn't forget about what they started after 4 minutes? </p>
+                    <div>
+                        <!-- Button trigger boilModal -->
+                        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#boilModal1">
+                            5 minute Time Killer
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="boilModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h4 class="modal-title" id="myModalLabel">Fun Title Goes Here</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3>Click to start Boil Timer</h3>
+                                        <button id="min5" type="button" class="btn btn-lg btn-primary">5 minute boil Timer</button>
+                                        <h1><span id="countdown1">300</span></h1>
+                                        <!-- PRACTICE API MODAL -->
+                                        <div class="container">
+                                            <h2>News Test</h2>
+                                            <p>Testing pulling new info. Last step to url to image.</p>
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Title</th>
+                                                        <th>Discription</th>
+                                                        <th>Image</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <!-- Example Movie 1 -->
+                                                        <td id="news"></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row services">
+                            <!-- When this line is deleted it throws everything off.  Maybe make new div? -->
+                            <div class="container">
+                                <!-- Reference: http://avexdesigns.com/responsive-youtube-embed/ -->
+                                <div class="row">
+                                    <h3>Possible Video Dump</h3>
+                                    <hr>
+                                </div>
+                                <!--.row -->
+                            </div>
+                            <!--./container -->
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h4>Yo homes, smell you later!</h4>
+                                        <p>
+                                            On the playground is where I pressed most of my days....
+                                        </p><img src="http://static.celebuzz.com/uploads/2013/06/20/french_press_bel_air-600x450.jpg" class="img-responsive center-block" alt="tv">
+                                    </div>
+                                    <!--.col -->
+                                    <div class="col-md-8">
+                                        <div class="vid">
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/GncGWS0Mzww" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                        <!--./vid -->
+                                    </div>
+                                    <!--.col -->
+                                </div>
+                                <!--./row -->
+                            </div>
+                            <!--./container -->
+                        </div>
                     </div>
-                </div><!-- /.12 -->
-            </div><!-- /.container -->
-        </div><!-- /.section -->
-                                <!-- 
+                    <!-- /.12 -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.section -->
+            <!-- 
                                 ################################################
                                 ==========================END D: #section2- BOIL
                                 ################################################
                                 -->
-
-<!-- 
+            <!-- 
 _______________________________________________________________________________
 E: START #section3- SOAK GROUNDS===============================================
 _______________________________________________________________________________
  -->
-        <div class="section" id="section3">
-            <div class="container">
-                <div class="col-md-12">
-                    <h2 class="title" data-animate="fadeInDown"><p>Soaking your grounds</h2>
-                    <div>
-                        <button id="min1" type="button" class="btn btn-lg btn-primary">1 minute</button>
-                        <h1><span id="countdown2">60</span></h1>
-                    </div>
-                    <p class="lead">The grounds you end up soaking will effect your coffee brew.  The coarser the better. Common practice is to ensure all grounds are soaked for at least a minute. Which adds validity to R. Kelly's belief that there really ain't nothing wrong with a little bumpy grind.</p>
-                    <h4>Stirring is debatable.  Do your research.  Drink lots of coffee.</h4>
-                    
-                   
-                        <button type="button" class="btn btn-success" id = "api1min">1minAPI</button>
-                    
-
-
-
-
-                    <div class="row services">
-                        <div class="col-md-4" data-animate="fadeInUp">
-                            <div class="icon"><i class="fa fa-home"></i>
+            <div class="section" id="section3">
+                <div class="container">
+                    <div class="col-md-12">
+                        <h2 class="title" data-animate="fadeInDown"><p>Soaking your grounds</h2>
+                        <p class="lead">The grounds you end up soaking will effect your coffee brew. The coarser the better. Common practice is to ensure all grounds are soaked for at least a minute. Which adds validity to R. Kelly's belief that there really ain't nothing wrong with a little bumpy grind.</p>
+                        <h4>Stirring is debatable.  Do your research.  Drink lots of coffee.</h4>
+                        <!-- Button trigger boilModal -->
+                        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#soakModal">
+                            1 minute Time Killer
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="soakModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h4 class="modal-title" id="myModalLabel">Their ain't nothing wrong with little bumpy grinds</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3>Click to start Soak Timer</h3>
+                                        <div>
+                                            <button id="min1" type="button" class="btn btn-lg btn-primary">1 minute</button>
+                                            <h1><span id="countdown2">60</span></h1>
+                                        </div>
+                                        <h1>ADD API TIME KILLER HERE</h1>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
                             </div>
-                            <h3 class="heading">OPTIONAL</h3>
-                            <p>Junk MTV quiz graced by fox whelps. </p>
                         </div>
-                        <div class="col-md-4" data-animate="fadeInUp">
-                            <div class="icon"><i class="fa fa-shopping-cart"></i>
-                            </div>
-                            <h3 class="heading">OPTIONAL</h3>
-                            <p>Bawds jog, flick quartz, vex nymphs. </p>
-                        </div>
-                        <div class="col-md-4" data-animate="fadeInUp">
-                            <div class="icon"><i class="fa fa-euro"></i>
-                            </div>
-                            <h3 class="heading">OPTIONAL</h3>
-                            <p>Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz. </p>
-                        </div>
-                        <!-- </div>
                         <div class="row services">
+                            <div class="col-md-4" data-animate="fadeInUp">
+                                <div class="icon"><i class="fa fa-home"></i>
+                                </div>
+                                <h3 class="heading">OPTIONAL</h3>
+                                <p>Junk MTV quiz graced by fox whelps. </p>
+                            </div>
+                            <div class="col-md-4" data-animate="fadeInUp">
+                                <div class="icon"><i class="fa fa-shopping-cart"></i>
+                                </div>
+                                <h3 class="heading">OPTIONAL</h3>
+                                <p>Bawds jog, flick quartz, vex nymphs. </p>
+                            </div>
+                            <div class="col-md-4" data-animate="fadeInUp">
+                                <div class="icon"><i class="fa fa-euro"></i>
+                                </div>
+                                <h3 class="heading">OPTIONAL</h3>
+                                <p>Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz. </p>
+                            </div>
+                            </div>
+                            <div class="row services">
 
                             <div class="col-md-4" data-animate="fadeInUp">
                                 <div class="icon"><i class="fa fa-bullhorn"></i>
                                 </div>
                                 <h3 class="heading">We will propagate your stuff</h3>
                                 <p>Brick quiz whangs jumpy veldt fox. Bright vixens jump; dozy fowl quack.</p>
-                            </div> -->
-                        <!-- <div class="col-md-4" data-animate="fadeInUp">
+                            </div>
+                            <div class="col-md-4" data-animate="fadeInUp">
                                 <div class="icon"><i class="fa fa-desktop"></i>
                                 </div>
                                 <h3 class="heading">Responsive web and app</h3>
@@ -299,44 +367,64 @@ _______________________________________________________________________________
                                 <h3 class="heading">Dedicated support team</h3>
                                 <p>Quick, Baz, get my woven flax jodhpurs! "Now fax quiz Jack!" my brave ghost pled. </p>
                             </div>
- -->
-                    </div>
-                </div> <!-- /.12 -->
-            </div><!-- /.container -->
-        </div>
 
-                                    <!-- 
+                        </div>
+                    </div>
+                    <!-- /.12 -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- 
                                     ##############################################
                                     ================END E: #section3- SOAK GROUNDS
                                     ##############################################
                                     -->
-
-<!-- _____________________________________________________________________________              
+            <!-- _____________________________________________________________________________              
 F: START #section4- STEEP ========================================================
 __________________________________________________________________________________
  -->
-    
-        <div class="section text-gray" data-animate="bounceIn" id="section4">
-            <div class="container">
-                <div class="col-md-8 col-md-offset-2">
-                    <h2 class="title">STEEP</h2>
-                        <div>
-                            <button id="min4" type="button" class="btn btn-lg btn-primary">4 minutes</button>
-                            <button id="min6" type="button" class="btn btn-lg btn-primary">6 minutes</button>
-                           <div class = "text-center"><h1><span id="countdown3"> 240 </span><span id="countdown4"> 360 </span></h1></div>
-                        </div>
-                    <p class="lead margin-bottom">Steeping is crucial. Our philistine palates prefer strong and stronger flavored coffee so we're not touching taste discussions. Dig deep into your soul to decide how long you want to steep to achieve your extraction preference. Our research (5+ online googled searched articles) agrees that less than 3 minutes will under extact and more than 6 will over extract. Choose wisely.</p>
-                    <p>
-                        <h4>Less time = weaker/sweeter;  more time = stronger/bitter.</h4></p>
-                    <p>
-                        <h5></h5></p>
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2">
-                            <form action="#" method="post" id="frm-landingPage2" class="form">
-                                <div class="input-group">
-
-                        <button type="button" class="btn btn-success" id = "api4min">4minAPI</button>
-
+            <div class="section text-gray" data-animate="bounceIn" id="section4">
+                <div class="container">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2 class="title">STEEP</h2>
+                        <p class="lead margin-bottom">Steeping is crucial. Our philistine palates prefer strong and stronger flavored coffee so we're not touching taste discussions. Dig deep into your soul to decide how long you want to steep to achieve your extraction preference. Our research (5+ online googled searched articles) agrees that less than 3 minutes will under extact and more than 6 will over extract. Choose wisely.</p>
+                        <p>
+                            <h4>Less time = weaker/sweeter;  more time = stronger/bitter.</h4></p>
+                        <p>
+                            <h5></h5></p>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <form action="#" method="post" id="frm-landingPage2" class="form">
+                                    <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#steepModal">
+                                        5 minute Time Killer
+                                    </button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="steepModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    <h4 class="modal-title" id="myModalLabel">STEEP, STEEP, STEEP, MUTHA MUTHA!</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <h3>Click to start Boil Timer</h3>
+                                                    <div>
+                                                        <button id="min4" type="button" class="btn btn-lg btn-primary">4 minutes</button>
+                                                        <button id="min6" type="button" class="btn btn-lg btn-primary">6 minutes</button>
+                                                        <div class="text-center">
+                                                            <h1><span id="countdown3"> 240 </span><span id="countdown4"> 360 </span></h1></div>
+                                                    </div>
+                                                    <!-- PRACTICE API MODAL -->
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="input-group"> -->
                                     <!-- <input type="text" class="form-control" placeholder="your email address" name="email" id="frm-landingPage2-email" required value="">
  -->
                                     <!-- <span class="input-group-btn">
@@ -344,22 +432,20 @@ ________________________________________________________________________________
                                             <input class="btn btn-default" type="submit" value="Submit" name="_submit" id="frm-landingPage2-submit">
 
                                         </span> -->
-                                </div>
+                            </div>
                             </form>
                         </div>
                     </div>
                 </div>
-            </div><!-- /.container -->
+            </div>
+            <!-- /.container -->
         </div>
- 
-                                        <!-- 
+        <!-- 
                                         ##############################################
                                         ====================END F: #section4- STEEPING
                                         ##############################################
                                          -->
-
-
-<!-- __________________________________________________________________________________              
+        <!-- __________________________________________________________________________________              
 G: START #section5- PLUNGE =======================================================
 __________________________________________________________________________________ 
 -->
@@ -367,51 +453,46 @@ ________________________________________________________________________________
             <div class="container-fluid">
                 <div class="col-md-12">
                     <h2 class="title" data-animate="fadeInDown">PLUNGE</h2>
-                    <div>
-                        <button id="sec15" type="button" class="btn btn-lg btn-primary">15 Seconds</button>
-                        <h1><span id="countdown5">15</span></h1>
-                    </div>
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
                             <p class="text-large text-thin" data-animate="fadeInUp">“There are few things I care about less than coffee. I have two big cups every morning: light and sweet, preferably in cardboard cup. Any bodega will do. I don’t want to wait for my coffee. I don’t want some man-bun, Mumford and Son motherfucker to get it for me. I like good coffee but I don’t want to wait for it, and I don’t want it with the cast of Friends. It’s a beverage; it’s not a lifestyle.” </p>
                             <p class="text-large text-thin margin-bottom" data-animate="fadeInUp">A very bad quack might jinx zippy fowls. Few quips galvanized the mock jury box. Quick brown dogs jump over the lazy fox. The jay, pig, fox, zebra, and my wolves quack! Blowzy red vixens fight for a quick jump. Joaquin Phoenix was gazed by MTV for luck. A wizard’s job is to vex chumps quickly in fog. Watch "Jeopardy!", Alex Trebek's fun TV quiz game. Woven silk pyjamas exchanged for blue quartz.</p>
                             <!-- <p data-animate="fadeInUp"><img src="img/home-99.jpeg" alt="" class="img-circle img-responsive ondra-michal"></p> -->
-
-                            
-
                             <!-- MODAL$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
                             <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#gifModal">
-  Gyphifyer
-</button>
-
-<!-- 15 second GifModal -->
-<div class="modal fade" id="gifModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <h4 class="modal-title" id="myModalLabel">Gifs of the Day</h4>
-      </div>
-      <div class="modal-body">
- <!-- GIF BUTTONS (3)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-        <button type="button" data-search="funny gifs"class="btn btn-success" id = "gifButton1">Gyphifier</button>
-        <button type="button" data-search="funny gifs"class="btn btn-success" id = "gifButton2">Gyphifier</button>
-        <button type="button" data-search="funny gifs"class="btn btn-success" id = "gifButton3">Gyphifier</button>
-            <!-- Modal Gif Well~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-            <div class="well" id="gifWell">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-                                
+                            <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#gifModal">
+                                Gyphifyer
+                            </button>
+                            <!-- 15 second GifModal -->
+                            <div class="modal fade" id="gifModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <h4 class="modal-title" id="myModalLabel">Gifs of the Day</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- GifModal 15 second timer -->
+                                            <div>
+                                                <button id="sec15" type="button" class="btn btn-lg btn-primary">15 Seconds</button>
+                                                <h1><span id="countdown5">15</span></h1>
+                                            </div>
+                                            <!-- GIF BUTTONS (3)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                                            <button type="button" data-search="funny gifs" class="btn btn-success" id="gifButton1">Gyphifier</button>
+                                            <button type="button" data-search="funny gifs" class="btn btn-success" id="gifButton2">Gyphifier</button>
+                                            <button type="button" data-search="funny gifs" class="btn btn-success" id="gifButton3">Gyphifier</button>
+                                            <!-- Modal Gif Well~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                                            <div class="well" id="gifWell">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -421,21 +502,16 @@ ________________________________________________________________________________
             <!-- /.container -->
         </div>
         <!-- /.section -->
-                                            
-                                        <!-- 
+        <!-- 
                                         ##############################################
                                         ====================END G: #section5- PLUNGE
                                         ##############################################
                                         -->
-
-
-
-<!--
+        <!--
  _______________________________________________________________________________________
 H:  START #section6- TESTIMONIALS  ====================================================
 _______________________________________________________________________________________
 -->
-   
         <div class="section text-gray" id="section6" data-animate="fadeInUp">
             <div class="container">
                 <div class="col-md-12">
