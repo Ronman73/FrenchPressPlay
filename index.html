@@ -192,50 +192,34 @@ ________________________________________________________________________________
                             5 minute Time Killer
                         </button>
                         <!-- Modal -->
-                        <div class="modal fade" id="boilModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="boilModal1" tabindex="-1" role="dialog" aria-labelledby="boilModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
-                                        <h4 class="modal-title" id="myModalLabel">Fun Title Goes Here</h4>
+                                        <h4 class="modal-title" id="boilModalLabel">Fun Title Goes Here</h4>
                                     </div>
                                     <div class="modal-fluid modal-body">
                                         <h3>Click to start Boil Timer</h3>
                                         <button id="min5" type="button" class="btn btn-lg btn-primary">5 minute boil Timer</button>
                                         <h1><span id="countdown1">300</span></h1>
                                         <!-- PRACTICE API MODAL -->
-                                        <div class="container">
-                                            <h2>News Test</h2>
-                                            <p>Testing pulling new info. Last step to url to image.</p>
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Title</th>
-                                                        <th>Discription</th>
-                                                        <th>Image</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <!-- Example Movie 1 -->
-                                                        <td id="news"></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                        <div class="container-fluid">
+                                            <div class="row"></div>
+                                                
+                                                <div class="container-fluid">
+                                                  <h1>News Search</h1>
+
+                                                  <!-- Rendered Buttons will get Dumped Here  -->
+                                                  <div id="buttonsView"></div>
+
+                                                  <!-- Movies will Get Dumped Dere -->
+                                                  <div id="newsView"></div>
+                                            
+                                                </div>
+
                                         </div>
                                     </div>
                                     <div class="modal-footer">

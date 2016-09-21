@@ -41,4 +41,15 @@ mark {
 
 
 }
+/*NEWS API CSS############################################*/
+button, div, form, input {
+	margin: 10px;
+
+}
+img {
+	width: 300px;
+}
+#newsView {
+	width: 450px;
+}
 
