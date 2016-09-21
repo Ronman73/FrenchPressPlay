@@ -28,17 +28,9 @@ mark {
    opacity: 0.8;
    text-shadow: 2px 2px black;
 }
-#intro {
-
+div.modal-body {
+	color: #5a5a5a;
 }
-
-#section2 {
-
-
-}
-
-#section3 {
-
 
 }
 /*NEWS API CSS############################################*/
