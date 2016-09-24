@@ -34,13 +34,7 @@ $(window).load(function(){
             newsDiv.append(pOne);
 
             // Retrieves the publish time
-            var released = response.articles[0].publishedAt;
-
-            // Creates an element to hold the release date
-            var pTwo = $('<p>').text( "" + released);
-
-            // Displays the release date
-            newsDiv.append(pTwo);
+            
 
             // Retrieves the discription
             var discription = response.articles[0].description;
@@ -111,30 +105,8 @@ $(window).load(function(){
         return false;
     })
 
+    // ========================================================
 
-
-var type = 'bbcnews';
-    var queryURL = "https://newsapi.org/v1/articles?source=" + type + "&apiKey=6815c9752550479f9968e6f04c64e532";
-
-
-
-    $.ajax({
-            url: queryURL,
-            method: 'GET'
-        })
-        .done(function(response) {
-            console.log(response);
-
-            // Example Movie
-            var firstRowTds = $('table').children().eq(1).children('tr').eq(1).children('td');
-
-            firstRowTds.eq(0).text(response.articles[0].title);
-
-            firstRowTds.eq(1).text(response.articles[0].description);
-
-            firstRowTds.eq(2).text(response.articles[0].urlToImage);
-
-        });
 
 
 //############################################################################################################
@@ -237,4 +209,40 @@ $("#submit").on("click", function(event){
     // Return False to allow "enter"
     return false;
 });
+// ############################################################################################################################################################
+// Video API comments
 
+var tag = document.createElement('script');
+   tag.src = "https://www.youtube.com/iframe_api";
+   var firstScriptTag = document.getElementsByTagName('script')[0];
+   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+   var player;
+   function onYouTubeIframeAPIReady() {
+     player = new YT.Player('player', {
+       playerVars: { 
+       listType:'playlist',
+       list: 'PLrEnWoR732-BHrPp_Pm8_VleD68f9s14-',
+       index: parseInt(0),
+       startSeconds:60,
+       endSeconds:600},
+       height: '390',
+       width: '569',
+       events: {
+         'onReady': onPlayerReady,
+         'onStateChange': onPlayerStateChange
+       }
+     });
+   }
+   function onPlayerReady(event) {
+      event.target.playVideo();
+   }
+   var done = false;
+   function onPlayerStateChange(event) {
+     if (event.data == YT.PlayerState.PLAYING && !done) {
+    setTimeout(pauseVideo, 60000);
+       done = true;
+     }
+   }
+   function pauseVideo() {
+     player.pauseVideo();
+   }
