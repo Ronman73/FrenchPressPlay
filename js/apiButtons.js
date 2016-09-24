@@ -217,7 +217,7 @@ var tag = document.createElement('script');
    var firstScriptTag = document.getElementsByTagName('script')[0];
    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
    var player;
-   function onYouTubeIframeAPIReady() {
+   function onYouTubeIframeAPIReady(click) {
      player = new YT.Player('player', {
        playerVars: { 
        listType:'playlist',
@@ -233,7 +233,7 @@ var tag = document.createElement('script');
        }
      });
    }
-   function onPlayerReady(event) {
+   function onPlayerReady(click) {
       event.target.playVideo();
    }
    var done = false;
