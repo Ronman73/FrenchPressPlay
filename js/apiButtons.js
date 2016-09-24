@@ -246,3 +246,39 @@ var tag = document.createElement('script');
    function pauseVideo() {
      player.pauseVideo();
    }
+
+
+   var tag = document.createElement('script');
+   tag.src = "https://www.youtube.com/iframe_api";
+   var firstScriptTag = document.getElementsByTagName('script')[0];
+   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+   var player1;
+   function onYouTubeIframeAPIReady(click) {
+     player = new YT.Player('player1', {
+       playerVars: { 
+       listType:'playlist',
+       list: 'PLrEnWoR732-BHrPp_Pm8_VleD68f9s14-',
+       index: parseInt(2),
+       startSeconds:60,
+       endSeconds:600},
+       height: '390',
+       width: '569',
+       events: {
+         'onReady': onPlayerReady,
+         'onStateChange': onPlayerStateChange
+       }
+     });
+   }
+   function onPlayerReady(click) {
+      event.target.playVideo();
+   }
+   var done = false;
+   function onPlayerStateChange(event) {
+     if (event.data == YT.PlayerState.PLAYING && !done) {
+    setTimeout(pauseVideo, 300000);
+       done = true;
+     }
+   }
+   function pauseVideo() {
+     player.pauseVideo();
+   }
