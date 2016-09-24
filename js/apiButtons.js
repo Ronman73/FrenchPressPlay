@@ -258,7 +258,7 @@ var tag = document.createElement('script');
        playerVars: { 
        listType:'playlist',
        list: 'PLrEnWoR732-BHrPp_Pm8_VleD68f9s14-',
-       index: parseInt(2),
+       index: parseInt(3),
        startSeconds:60,
        endSeconds:600},
        height: '390',
