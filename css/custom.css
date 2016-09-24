@@ -19,11 +19,15 @@ mark {
   color: #2e723e;
   background: transparent;
   font-weight: bold;
-   text-shadow: 1.5px 1.5px 1.5px black, 0 0 35px white, 0 0 5px #ffffff;
-  font-size: 28px;
+   text-shadow: 1px 1px 1px White, 0 0 10px #549666, 0 0 10px #f7f7f7;
+  font-size: 40px;
 }
 h6 {
 	color: #549666;
+	font-weight: bold;
+	font-size: 15px;
+	text-shadow: 1px 1px 1px White, 0 0 10px #549666, 0 0 10px #f7f7f7;
+
 }
 .centered-text {
 	text-align: center;
@@ -36,18 +40,48 @@ h6 {
 }
 *	FrenchPress.Play green color emphasis with shadow reference
 -----------------------------------------------------------------------------*/
-
-#intro.item {
-   opacity: 0.8;
-   text-shadow: 2px 2px black;
 }
-div.modal-body {
+
+#intro .item {
+  min-height: 100%;
+  background: url('../img/fpbackground1.jpg') center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-backface-visibility: hidden;
+  padding-top: 200px;
+  padding-bottom: 120px;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+div .modal-body {
 	color: #5a5a5a;
-}
+	background-color: #549666
+	opacity: .8;
 
+}
+.section1 {
+	background: transparent;
+}
+.section2 {
+	background: #fff;
+}
+.section3 {
+	background: transparent;
+}
+.section4 {
+	background: #fff;
+}
+.section5 {
+	background: transparent;
+}
+.section6 {
+	background: #fff
 }
 /*NEWS API CSS############################################*/
-button, div, form, input {
+button, form, input {
 	margin: 10px;
 
 }
@@ -57,4 +91,10 @@ img {
 #newsView {
 	width: 500px;
 }
+
+
+/*######################################################################
+Pop-ups
+######################################################################*/
+
 

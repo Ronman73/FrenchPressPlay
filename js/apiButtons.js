@@ -144,16 +144,10 @@ $('#gifButton1').on('click',function(){
     var x = $(this).data("search");
     console.log(x);
 
-    var queryUrl = "http://api.giphy.com/v1/stickers/trending?api_key=dc6zaTOxFJmzC&Limit=4";
-            console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
-            console.log("queryUrl: " + queryUrl);
-            console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+    var queryUrl = "https://api.giphy.com/v1/stickers/trending?api_key=dc6zaTOxFJmzC&Limit=4";           
      $.ajax({url:queryUrl,method: 'GET'})
             .done(function(response) {
-                 for (var i=0; i < response.data.length; i++) {
-                console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
-                console.log(response);
-                console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+                 for (var i=0; i < response.data.length; i++) {               
                 $('#gifWell').append("<img src= '" +response.data[i].images.fixed_width.url+ "'p>");
                   }
             })
@@ -164,43 +158,83 @@ $('#gifButton2').on('click',function(){
     var x = $(this).data("search");
     console.log(x);
 
-    var queryUrl = "http://api.giphy.com/v1/stickers/search?q=cat&api_key=dc6zaTOxFJmzC&Limit=4";
-            console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
-            console.log("queryUrl: " + queryUrl);
-            console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+    var queryUrl = "https://api.giphy.com/v1/stickers/search?q=cat&api_key=dc6zaTOxFJmzC&Limit=4";           
      $.ajax({url:queryUrl,method: 'GET'})
             .done(function(response) {
-                 for (var i=0; i < response.data.length; i++) {
-                console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
-                console.log(response);
-                console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+                 for (var i=0; i < response.data.length; i++) {               
                 $('#gifWell').append("<img src= '" +response.data[i].images.fixed_width.url+ "'p>");
                   }
             })
-                // var stuff = "";
+                
 })
 
 $('#gifButton3').on('click',function(){
     var x = $(this).data("search");
     console.log(x);
 
-    var queryUrl = "http://api.giphy.com/v1/stickers/search?q=dog&api_key=dc6zaTOxFJmzC&Limit=4";
-            console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
-            console.log("queryUrl: " + queryUrl);
-            console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+    var queryUrl = "https://api.giphy.com/v1/stickers/search?q=dog&api_key=dc6zaTOxFJmzC&Limit=4";
      $.ajax({url:queryUrl,method: 'GET'})
             .done(function(response) {
                  for (var i=0; i < response.data.length; i++) {
-                console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
-                console.log(response);
-                console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
                 $('#gifWell').append("<img src= '" +response.data[i].images.fixed_width.url+ "'p>");
                   }
             })
-                // var stuff = "";
 })
+// ###############################################################################################################################################
+// Popovers
+// Select all elements with data-toggle="popover" in the document
+$('[data-toggle="popover"]').popover(); 
 
+// Select a specified element
+$('#myPopover').popover();
 
+// #################################################################################################################################################
+// Firebase Comments
 
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCeWUvq0jmjTWHcrOnsrjcPgng6q7xJbfU",
+    authDomain: "frenchpressplay.firebaseapp.com",
+    databaseURL: "https://frenchpressplay.firebaseio.com",
+    storageBucket: "frenchpressplay.appspot.com",
+    messagingSenderId: "87448144052"
+  };
+  firebase.initializeApp(config);
+// Create a variable to reference the database
+var database = firebase.database();
 
+database.ref().on("child_added", function(snapshot) {
+
+    // Update table
+    var template;
+
+    template += "<tr>" + 
+        "<th>" + snapshot.val().name + "</th>" + 
+        "<th>" + snapshot.val().location + "</th>" + 
+        "<th>" + snapshot.val().comment + "</th>" +
+        "</tr>";
+
+    $("#table_body").append(template);
+
+// If any errors are experienced, log them to console. 
+}, function (errorObject) {
+    console.log("The read failed: " + errorObject.code);
+});
+
+// Whenever a user clicks the click button
+$("#submit").on("click", function(event){
+
+    var newComment = {
+        name: $("#name").val().trim(),
+        location: $("#location").val().trim(),
+        comment: $("#comment").val().trim(),
+    }
+
+    // empArr.push(newEmp);
+
+    database.ref().push(newComment);
+
+    // Return False to allow "enter"
+    return false;
+});
 
