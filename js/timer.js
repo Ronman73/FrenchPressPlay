@@ -61,7 +61,7 @@ $(function() {
 
 // 6 Minute Timer (360 seconds)
 $(function() {
-  var max_time = 360;
+  var max_time = 300;
   var cinterval;
 
   function countdown_timer() {
