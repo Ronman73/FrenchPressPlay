@@ -275,7 +275,7 @@ var tag = document.createElement('script');
    var done = false;
    function onPlayerStateChange(event) {
      if (event.data == YT.PlayerState.PLAYING && !done) {
-    setTimeout(pauseVideo, 360000);
+    setTimeout(pauseVideo, 300000);
        done = true;
      }
    }
