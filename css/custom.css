@@ -1,0 +1,158 @@
+/***************************************************************************
+
+	FrenchPress.Play Custom Stylesheet
+
+	Colors used: 
+	White Fonts           : #ffffff
+	Green          : #549666
+	Light Grey Background : #f7f7f7
+	thin Dark Grey Text   : #5a5a5a;
+	black footer		  : #191919
+
+****************************************************************************/
+
+
+/*----------------------------------------------------------------------------
+*	FrenchPress.Play green color emphasis with shadow reference and other varied title colors
+-----------------------------------------------------------------------------*/
+mark {
+  color: #2e723e;
+  background: transparent;
+  font-weight: bold;
+   text-shadow: 1px 1px 1px White, 0 0 10px #549666, 0 0 10px #f7f7f7;
+  font-size: 40px;
+}
+h6 {
+	color: #549666;
+	font-weight: bold;
+	font-size: 15px;
+	text-shadow: 1px 1px 1px White, 0 0 10px #549666, 0 0 10px #f7f7f7;
+
+}
+.centered-text {
+	text-align: center;
+}
+
+ /*----------------------------------------------------------------------------
+}
+}
+}
+}
+*	FrenchPress.Play green color emphasis with shadow reference
+-----------------------------------------------------------------------------*/
+}
+
+#intro .item {
+  min-height: 100%;
+  background: url('../img/fpbackground1.jpg') center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-backface-visibility: hidden;
+  padding-top: 200px;
+  padding-bottom: 120px;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+div .modal-body {
+	color: #5a5a5a;
+	background-color: #549666
+	opacity: .8;
+
+}
+.section1 {
+	background: transparent;
+}
+.section2 {
+	background: #fff;
+}
+.section3 {
+	background: transparent;
+}
+.section4 {
+	background: #fff;
+}
+.section5 {
+	background: transparent;
+}
+.section6 {
+	background: #fff
+}
+/*NEWS API CSS############################################*/
+button, form, input {
+	margin: 10px;
+
+}
+img {
+	width: 500px;
+}
+#newsView {
+	width: 500px;
+}
+
+
+/*######################################################################
+Pop-ups
+######################################################################*/
+
+
+
+/*#######################################################################*/
+/*Google Maps*/
+/*#######################################################################*/
+<style>
+      /*html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;*/
+      }
+      #map {
+        height: 100%;
+      }
+      .controls {
+        margin-top: 10px;
+        border: 1px solid transparent;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        height: 32px;
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      #pac-input {
+        background-color: #fff;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 12px;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 300px;
+      }
+
+      #pac-input:focus {
+        border-color: #4d90fe;
+      }
+
+      .pac-container {
+        font-family: Roboto;
+      }
+
+      #type-selector {
+        color: #fff;
+        background-color: #4d90fe;
+        padding: 5px 11px 0px 11px;
+      }
+
+      #type-selector label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300;
+      }
+      #target {
+        width: 345px;
+      }
+
